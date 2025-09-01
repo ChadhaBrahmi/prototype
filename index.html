@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Shop</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="logo.png" type="image/png">
+</head>
+<body class="light">
+
+
+  <header id="navbar">
+    <img src="logo.png" alt="Logo" style="width: 50px; height: 50px; margin-right: 10px;">
+
+    <nav>
+      <a href="#products" id="products-link">Products</a>
+      <a href="#" id="checkout-link">Checkout</a>
+     
+    </nav>
+  </header>
+
+  
+  <div class="container">
+
+    
+    <section id="products">
+      <h2>Our Products</h2>
+    <div class="products">
+  <div class="product">
+    <img src="pic1.jfif" alt="Product 1">
+    <div class="product-info">
+      <h3>Product 1</h3>
+      <p>$25</p>
+      <button class="btn" onclick="addToCart('Product 1', 25, 'pic1.jfif')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product">
+    <img src="pic2.jfif" alt="Product 2">
+    <div class="product-info">
+      <h3>Product 2</h3>
+      <p>$40</p>
+      <button class="btn" onclick="addToCart('Product 2', 40, 'pic2.jfif')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product">
+    <img src="pic3.jfif" alt="Product 3">
+    <div class="product-info">
+      <h3>Product 3</h3>
+      <p>$30</p>
+      <button class="btn" onclick="addToCart('Product 3', 30, 'pic3.jfif')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product">
+    <img src="pic4.jfif" alt="Product 4">
+    <div class="product-info">
+      <h3>Product 4</h3>
+      <p>$50</p>
+      <button class="btn" onclick="addToCart('Product 4', 50, 'pic4.jfif')">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product">
+    <img src="pic5.jfif" alt="Product 5">
+    <div class="product-info">
+      <h3>Product 5</h3>
+      <p>$60</p>
+      <button class="btn" onclick="addToCart('Product 5', 60, 'pic5.jfif')">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section id="checkout" style="display: none;">
+        <div id="cart">
+  <h2>Your Cart</h2>
+  <div id="cart-items"></div>
+  <p id="cart-total"><strong>Total:</strong> $0</p>
+</div>
+
+     <div class="payment-box">
+  <h3>How to Pay</h3>
+  <ol>
+    <li>Open the <strong>BaridiMob</strong>  app.</li>
+    <li>Choose <strong>Transfer</strong>.</li>
+    <li>Scan this QR code to get the CCP number:</li>
+    <img src="ccp.png" alt="CCP QR Code" class="qr-code">
+    <li>Enter the total amount and complete the payment.</li>
+    <li>Take a <strong>screenshot</strong> of the receipt and upload it below.</li>
+  </ol>
+</div>
+
+<form id="order-form">
+  <input id="name" type="text" placeholder="Full Name" required>
+  <input id="phone" type="text" placeholder="Phone Number" required>
+  <input id="email" type="text" placeholder="Gmail" required>
+  <label id="wilaya" for="wilaya">Select Your Wilaya</label>
+<select id="wilaya" name="wilaya" required>
+  <option value="">-- Choose Wilaya --</option>
+  <option value="1">Adrar</option>
+  <option value="2">Chlef</option>
+  <option value="3">Laghouat</option>
+  <option value="4">Oum El Bouaghi</option>
+  <option value="5">Batna</option>
+  <option value="6">Béjaïa</option>
+  <option value="7">Biskra</option>
+  <option value="8">Béchar</option>
+  <option value="9">Blida</option>
+  <option value="10">Bouira</option>
+  <option value="11">Tamanrasset</option>
+  <option value="12">Tébessa</option>
+  <option value="13">Tlemcen</option>
+  <option value="14">Tiaret</option>
+  <option value="15">Tizi Ouzou</option>
+  <option value="16">Alger</option>
+  <option value="17">Djelfa</option>
+  <option value="18">Jijel</option>
+  <option value="19">Sétif</option>
+  <option value="20">Saïda</option>
+  <option value="21">Skikda</option>
+  <option value="22">Sidi Bel Abbès</option>
+  <option value="23">Annaba</option>
+  <option value="24">Guelma</option>
+  <option value="25">Constantine</option>
+  <option value="26">Médéa</option>
+  <option value="27">Mostaganem</option>
+  <option value="28">MSila</option>
+  <option value="29">Mascara</option>
+  <option value="30">Ouargla</option>
+  <option value="31">Oran</option>
+  <option value="32">El Bayadh</option>
+  <option value="33">Illizi</option>
+  <option value="34">Bordj Bou Arréridj</option>
+  <option value="35">Boumerdès</option>
+  <option value="36">El Tarf</option>
+  <option value="37">Tindouf</option>
+  <option value="38">Tissemsilt</option>
+  <option value="39">El Oued</option>
+  <option value="40">Khenchela</option>
+  <option value="41">Souk Ahras</option>
+  <option value="42">Tipaza</option>
+  <option value="43">Mila</option>
+  <option value="44">Aïn Defla</option>
+  <option value="45">Naâma</option>
+  <option value="46">Aïn Témouchent</option>
+  <option value="47">Ghardaïa</option>
+  <option value="48">Relizane</option>
+  <option value="49">El M’ghair</option>
+  <option value="50">El Meniaa</option>
+  <option value="51">Ouled Djellal</option>
+  <option value="52">Bordj Baji Mokhtar</option>
+  <option value="53">Béni Abbès</option>
+  <option value="54">Timimoun</option>
+  <option value="55">Touggourt</option>
+  <option value="56">Djanet</option>
+  <option value="57">In Salah</option>
+  <option value="58">In Guezzam</option>
+</select>
+
+  <textarea id="address" placeholder="Home Address" rows="3" required></textarea>
+  <label>Upload Payment Proof (screenshot)</label>
+  <input type="file" id="paymentProof" required>
+  <button type="submit">Submit Order</button>
+
+</form>
+<button id="back-to-products">Back to Products</button>
+
+
+    </section>
+<div id="popup" class="popup">Added!</div>
+  </div>
+
+  
+  <footer>
+<p>&copy; 2025 Made by <a href="https://chadha-brahmi.vercel.app/" target="_blank">Brahmi Chadha</a>.</p>
+
+  </footer>
+
+<script>
+  let cart = [];
+
+  function toggleTheme() {
+    document.body.classList.toggle("dark");
+    document.body.classList.toggle("light");
+  }
+
+  function addToCart(product, price, image) {
+    cart.push({ product, price, image });
+    updateCart();
+    showPopup();
+  }
+
+  function removeFromCart(index) {
+    cart.splice(index, 1);
+    updateCart();
+  }
+
+  function updateCart() {
+    const cartItems = document.getElementById("cart-items");
+    const form = document.getElementById("order-form");
+    const cartTotal = document.getElementById("cart-total");
+
+    if (cart.length === 0) {
+      cartItems.innerHTML = "<p>Your cart is empty.</p>";
+      form.style.display = "none";
+      cartTotal.textContent = "Total: $0";
+    } else {
+      cartItems.innerHTML = cart
+        .map(
+          (item, index) => `
+        <div class="cart-item">
+          <img src="${item.image}" alt="${item.product}">
+          <div class="cart-info">
+            <p><strong>${item.product}</strong></p>
+            <p>$${item.price}</p>
+          </div>
+          <button class="remove-btn" onclick="removeFromCart(${index})">Remove</button>
+        </div>`
+        )
+        .join("");
+
+      
+      const total = cart.reduce((sum, item) => sum + item.price, 0);
+      cartTotal.textContent = `Total: $${total}`;
+
+      form.style.display = "block"; 
+    }
+  }
+
+  function showPopup() {
+    const popup = document.getElementById("popup");
+    popup.classList.add("show");
+    setTimeout(() => {
+      popup.classList.remove("show");
+    }, 1500);
+  }
+
+  
+  window.addEventListener("scroll", () => {
+    const navbar = document.getElementById("navbar");
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+
+
+  document.getElementById("checkout-link").addEventListener("click", (e) => {
+    e.preventDefault();
+    document.getElementById("products").style.display = "none";
+    document.getElementById("checkout").style.display = "block";
+    updateCart();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  document.getElementById("back-to-products").addEventListener("click", () => {
+    document.getElementById("products").style.display = "block";
+    document.getElementById("checkout").style.display = "none";
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+
+  async function submitOrder(event) {
+  event.preventDefault();
+
+  const fileInput = document.getElementById("paymentProof").files[0];
+  const reader = new FileReader();
+
+  reader.onload = async function() {
+    const base64Data = reader.result.split(",")[1];
+
+    const payload = {
+      name: document.getElementById("name").value,
+      phone: document.getElementById("phone").value,
+      email: document.getElementById("email").value,
+      wilaya: document.getElementById("wilaya").value,
+      address: document.getElementById("address").value,
+      cart: cart.map(item => `${item.product} ($${item.price})`).join(", "),
+      total: cart.reduce((sum, item) => sum + item.price, 0),
+      fileName: fileInput.name,
+      fileType: fileInput.type,
+      fileData: base64Data
+    };
+
+    let res = await fetch("https://script.google.com/macros/s/AKfycbydxEwayqf3Z1Nm46_Ni9AWm4sbEbupqm-R2qkFNIRkUY4Js6SPCkeE2NlomCRtr-4LpQ/exec", {
+      method: "POST",
+     headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify(payload)
+});
+
+    let data = await res.json();
+    if (data.result === "success") {
+      alert("✅ Order submitted successfully!");
+      document.getElementById("order-form").reset();
+      cart = [];
+      updateCart();
+    } else {
+      alert("❌ Failed to submit order.");
+    }
+  };
+
+  reader.readAsDataURL(fileInput);
+}
+document.getElementById("order-form").addEventListener("submit", submitOrder);
+
+</script>
+
+  
+</body>
+</html>
